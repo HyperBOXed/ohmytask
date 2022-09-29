@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="./drag.css">
+<style>
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+
+</style>
+<body>
+
+<h1>Draggable DIV Element</h1>
+
+<p>Click and hold the mouse button down while moving the DIV element</p>
+
+  <div class="omt-wp_note" editable>
+    <div id="mydivheader">Click here to move</div>
+    <br>
+    <input type="text" placeholder="Title">
+    <br>
+    <textarea placeholder="Note description"></textarea>
+    <br>
+    <label>Beginning date</label>
+    <br>
+    <input type="date" name="date-start">
+    <br>
+    <label for="date-end">Ending date</label>
+    <br>
+    <input type="date" name="date-end">
+    <br>
+    <input type="button" value="Done">
+    <br>
+    <br>
+    <p>Created on ${today.getDate()+"."+today.getMonth()+"."+today.getFullYear()} at ${today.getHours()+":"+today.getMinutes()}</p>
+    </div>
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.querySelector(".omt-wp_note"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX + 10;
+    pos2 = pos4 - e.clientY + 40;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+
+</body>
+</html>

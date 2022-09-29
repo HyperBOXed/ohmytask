@@ -1,0 +1,357 @@
+@font-face {
+  font-family: "vinn";
+  src: url("./fonts/vinnytsiacity/VinnytsiaCity.ttf");
+}
+@font-face {
+  font-family: "namu";
+  src: url("./fonts/NAMU/NAMU-Pro.ttf");
+}
+@font-face {
+  font-family: "okta1";
+  src: url("./fonts/groteskly-yours-okta-neue/okta1.otf");
+}
+@font-face {
+  font-family: "okta2";
+  src: url("./fonts/groteskly-yours-okta-neue/okta2.otf");
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+* .sec-banner {
+  display: flex;
+  background: #9CECFB; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-bottom: 120px;
+  padding-top: 120px;
+  padding-left: 60px;
+  padding-right: 60px;
+  color: #fff;
+}
+* .sec-banner .sb-block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  align-items: center;
+}
+* .sec-banner #sb-2 {
+  justify-content: center;
+}
+* .sec-banner #sec-banner-title {
+  font-family: "okta1";
+  font-size: 96px;
+  text-shadow: 0px 0px 35px rgba(0, 0, 0, 0.75);
+  margin-bottom: 16px;
+}
+* .sec-banner p {
+  color: #fff;
+  font-family: "namu";
+  font-size: 24px;
+  text-shadow: 0px 0px 35px rgba(0, 0, 0, 0.75);
+}
+* #decor-wave {
+  background: #9CECFB; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+* #sep-1 {
+  position: relative;
+  width: 70%;
+  height: 4px;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #9CECFB; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+* .center-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+* .center-cont .cc-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+* .sec-about h1 {
+  font-family: "okta1";
+  text-align: center;
+  font-size: 48px;
+}
+* .sec-about p {
+  font-family: "namu";
+  font-size: 27px;
+  text-align: center;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+* .sec-about .sa-features {
+  display: flex;
+  flex-wrap: nowrap;
+}
+* .sec-about .sa-features .saf-block {
+  padding: 14px;
+}
+* .sec-about .sa-features .saf-block h2 {
+  margin-bottom: 12px;
+  font-family: "okta1";
+  font-weight: 900;
+  font-size: 27px;
+  text-align: center;
+  padding: 0;
+}
+* .sec-about .sa-features .saf-block p {
+  font-family: "okta2";
+  font-weight: 900;
+  font-size: 21px;
+  text-align: center;
+  padding: 0;
+}
+* .sec-about .sa-features .saf-block img {
+  width: 128px;
+  height: 128px;
+  margin-bottom: 10px;
+}
+* .sec-info {
+  margin-top: 10px;
+}
+* .sec-info .si-block {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 60px;
+  /*.sib-sec-1 {
+
+  }*/
+}
+* .sec-info .si-block p {
+  font-family: "namu";
+  font-size: 27px;
+  color: #000;
+}
+* .sec-info .si-block .sib-sec {
+  width: 50%;
+}
+* .sec-info .si-block .ss-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+* .sec-info .si-block #ss-1 {
+  margin-left: 64px;
+}
+* .sec-info .si-block #ss-2 {
+  margin-right: 64px;
+}
+* #btn-1 {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background: #0052D4;
+  border: 1px solid #0052D4;
+  border-radius: 10px;
+  box-shadow: #fff 4px 4px 0 0, #0052D4 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "namu";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+* #btn-1:focus {
+  text-decoration: none;
+}
+* #btn-1:hover {
+  text-decoration: none;
+}
+* #btn-1:active {
+  box-shadow: rgba(0, 82, 212, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+* #btn-1:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #0052D4 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+* .sec-install {
+  margin-top: 70px;
+}
+* .sec-install h1 {
+  font-family: "okta1";
+  font-size: 48px;
+  text-align: center;
+}
+* .sec-install p {
+  font-family: "namu";
+  font-size: 24px;
+  text-align: center;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+* footer {
+  background: #9CECFB; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0052D4, #65C7F7, #0052D4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-top: 40px;
+}
+* footer p {
+  font-family: "namu";
+  color: #fff;
+}
+* footer #fdiv {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px 40px 40px;
+}
+* footer h2 {
+  font-family: "okta1";
+  color: #fff;
+}
+* footer .f-categ-cont {
+  display: flex;
+  justify-content: space-around;
+}
+* footer .f-categ-cont .fcc-block {
+  margin-right: 30px;
+}
+* footer .f-categ-cont .fcc-block p {
+  background-color: #fff;
+  font-family: "okta1";
+  color: #0052D4;
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+}
+* footer .f-categ-cont .fcc-block a {
+  text-decoration: none;
+  font-family: "namu";
+  color: #fff;
+  font-size: 21px;
+}
+* footer .f-categ-cont .fcc-block a:hover {
+  text-decoration: underline;
+}
+* footer .f-categ-cont .fcc-block ul li {
+  list-style: none;
+}
+* .dropdown-container {
+  font-size: 21px;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+}
+* .dropdown-container .dropdown {
+  position: relative;
+  font-family: "namu";
+  display: flex;
+  flex-wrap: wrap;
+}
+* .dropdown-container .dropdown .content-container {
+  display: flex;
+}
+* .dropdown-container .dropdown .content-container .cont {
+  max-height: 200px;
+  overflow-y: scroll;
+  position: absolute;
+  bottom: 39px;
+  border-radius: 10px;
+  height: auto;
+  background-color: #fff;
+  padding: 14px;
+  width: 200px;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+}
+* .dropdown-container .dropdown .content-container .cont .option {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  transition: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+* .dropdown-container .dropdown .content-container .cont .option:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+* .dropdown-container .dropdown .content-container .cont .option .ddc-opt-LangIco {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+* .dropdown-container .dropdown .content-container .cont::-webkit-scrollbar {
+  width: 10px;
+}
+* .dropdown-container .dropdown .content-container .cont::-webkit-scrollbar-track {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+* .dropdown-container .dropdown .content-container .cont::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: darkgray;
+}
+* .dropdown-container .dropdown .content-container .cont::-webkit-scrollbar-thumb:active {
+  background-color: rgb(116, 116, 116);
+}
+* .dropdown-container .dropdown .upper {
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+* .nav-1 {
+  position: fixed;
+  background-color: #fff;
+  padding: 24px;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+* .nav-1 ul {
+  display: flex;
+  list-style: none;
+}
+* .nav-1 ul li {
+  padding-right: 18px;
+}
+* .nav-1 ul li a {
+  font-family: "okta1";
+  font-size: 27px;
+  text-decoration: none;
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: rgb(0, 145, 255);
+  background: rgb(255, 255, 255);
+}
+
+::selection {
+  color: rgb(0, 145, 255);
+  background: rgb(255, 255, 255);
+}/*# sourceMappingURL=style.css.map */
