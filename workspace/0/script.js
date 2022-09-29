@@ -126,12 +126,6 @@ function dragElement(elmnt) {
       document.onmousemove = null;
       if (par != null) {
         par.style.zIndex = par.eID;
-        document.querySelectorAll(".omt-wp_note").forEach(element => {
-          if (par != element) {
-            //console.log(IDs)
-            par.style.zIndex = Math.max(...IDs);
-          }
-        });
         if (currentelem.offsetLeft - pos1 <= 0) {
           currentelem.style.left = 0+"px";
           }
