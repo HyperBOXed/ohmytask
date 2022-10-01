@@ -1,19 +1,25 @@
-for (var i=0; i<document.querySelectorAll(".dropdown-container .dropdown .cont .option").length; i++) {
-    if (document.querySelector(".dropdown-container .dropdown .upper").getAttribute("chosenOption")==i) {
-        document.querySelector(".dropdown-container .dropdown .upper").setAttribute("chosenOption",i);
-        document.querySelector(".dropdown-container .dropdown .upper p").innerHTML=document.querySelectorAll(".dropdown-container .dropdown .cont .option")[i].innerText;
+var dd = document.querySelectorAll(".dropdown-container");
+dd.forEach(list => {
+    for (var i=0; i<list.querySelectorAll(".dropdown .cont .option").length; i++) {
+        if (list.querySelector(".dropdown .upper").getAttribute("chosenOption")==i) {
+            list.querySelector(".dropdown .upper").setAttribute("chosenOption",i);
+            list.querySelector(".dropdown .upper p").innerHTML=list.querySelectorAll(".dropdown .cont .option")[i].innerText;
+        }
     }
-}
+});
 window.addEventListener("click",(ev)=>{
-    if (ev.target!==document.querySelector(".dropdown-container .dropdown .upper")&&ev.target!==document.querySelector(".dropdown-container .dropdown .upper p")) {
-        document.querySelector(".dropdown-container .dropdown .cont").classList.add("hidden");
-        document.querySelectorAll(".dropdown-container .dropdown .cont .option").forEach(element => {
-            if (ev.target==element) {
-                document.querySelector(".dropdown-container .dropdown .upper").setAttribute("chosenOption",element.getAttribute("id"));
-                document.querySelector(".dropdown-container .dropdown .upper p").innerHTML=element.innerText;
-            }
-        });
-    }else{
-        document.querySelector(".dropdown-container .dropdown .cont").classList.toggle("hidden");
-    }
+    var dd = document.querySelectorAll(".dropdown-container");
+    dd.forEach(list => {
+        if (ev.target!==list.querySelector(".dropdown .upper")&&ev.target!==list.querySelector(".dropdown .upper p")) {
+            list.querySelector(".dropdown .cont").classList.add("hidden");
+            list.querySelectorAll(".dropdown .cont .option").forEach(element => {
+                if (ev.target==element) {
+                    list.querySelector(".dropdown .upper").setAttribute("chosenOption",element.getAttribute("id"));
+                    list.querySelector(".dropdown .upper p").innerHTML=element.innerText;
+                }
+            });
+        }else{
+            list.querySelector(".dropdown .cont").classList.toggle("hidden");
+        }
+    });
 });

@@ -1,11 +1,16 @@
 @font-face {
     font-family: "vinn";
-    src: url("./fonts/vinnytsiacity/VinnytsiaCity.ttf");
+    src: url("./fonts/vinnytsiacity/VinnytsiaSansBold.ttf");
 }
 @font-face {
     font-family: "namu";
     src: url(
         "./fonts/NAMU/NAMU-Pro.ttf");
+}
+@font-face {
+    font-family: "rubik";
+    src: url(
+        "./fonts/Rubik/Rubik-VariableFont_wght.ttf");
 }
 @font-face {
     font-family: "okta1";
@@ -298,6 +303,10 @@
                         &:hover {
                             background-color: rgba($color: #000000, $alpha: 0.1);
                         }
+                        &:active {
+                            transform: scale(0.9);
+                            background-color: rgba($color: #000000, $alpha: 0.1);
+                        }
                         .ddc-opt-LangIco {
                             width: 24px;
                             height: 24px;
@@ -330,6 +339,34 @@
                 display: flex;
                 flex-wrap: wrap;
                 cursor: pointer;
+            }
+            .upper2 {
+                color: rgb(255, 255, 255);
+                width: 24px;
+                outline: 0;
+                display: flex;
+                flex-wrap: wrap;
+                border-radius: 0px;
+                padding: 0;
+                cursor: pointer;
+                opacity: 0.5;
+                background-image: url("./img/OhMyTask_PNGs_ICOs/PNGs/dots.png");
+                background-repeat: no-repeat;
+                background-position-x: center;
+                background-position-y: center;
+                background-size: contain;
+                height: 24px;
+                p {
+                    display: none;
+                }
+                transition: 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                &:hover {
+                    opacity: 0.8;
+                }
+                &:active {
+                    background-blend-mode: hue;
+                    transform: scale(0.9);
+                }
             }
         }
     }

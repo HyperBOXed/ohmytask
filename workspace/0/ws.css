@@ -1,5 +1,4 @@
 *:focus {
-  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   box-shadow: 0px 0px 0px 3px rgba(0, 82, 212, 0.3);
 }
 * body {
@@ -24,7 +23,12 @@
   list-style: none;
 }
 * .nav-2 ul li {
+  display: flex;
   padding-right: 18px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
 }
 * .nav-2 ul li a {
   font-family: "okta1";
@@ -32,14 +36,24 @@
   text-decoration: none;
   color: #000;
 }
+* .nav-2 ul li img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
 * .nav-2 ul li {
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -moz-user-select: none;
   transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   padding-right: 0;
   background-color: #fff;
-  width: 72px;
-  height: 72px;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
   margin-right: 10px;
-  border-radius: 72px;
+  padding: 10px;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
@@ -131,13 +145,25 @@
   height: 20%;
 }
 
+.inliner {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
 .omt-wp_note {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
   background-color: #fff;
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   margin-top: 40px;
   margin-left: 10px;
+  max-width: 600px;
   color: #000;
   font-family: "namu";
   padding: 30px;
@@ -147,10 +173,26 @@
 }
 .omt-wp_note #dragger {
   cursor: move;
-  width: 100%;
-  height: 30px;
+  position: relative;
+  width: 50%;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.062);
+}
+.omt-wp_note #cross {
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  opacity: 0.5;
+  cursor: pointer;
+  background-image: url("../../img/OhMyTask_PNGs_ICOs/PNGs/cross.png");
+  transition: 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.omt-wp_note #cross:hover {
+  opacity: 0.8;
+}
+.omt-wp_note #cross:active {
+  background-blend-mode: hue;
+  transform: scale(0.9);
 }
 .omt-wp_note ::-moz-selection { /* Code for Firefox */
   color: rgb(255, 255, 255);
@@ -170,7 +212,6 @@
   border: 3px solid #0052D4;
   font-size: 18px;
   border-radius: 4px;
-  transition: 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .omt-wp_note input {
   margin-top: 5px;
@@ -207,6 +248,7 @@
   margin-top: 10px;
   padding: 5px;
   width: 262px;
+  height: 30px;
   font-family: "namu";
   outline: none;
   font-size: 18px;
@@ -272,4 +314,32 @@
 }
 .ws .ws-container .wsc-block .sidepanel #si4 {
   background-image: url("../../img/OhMyTask_PNGs_ICOs/PNGs/logout.png");
+}
+.ws #pst_0 {
+  font-family: "okta1";
+  font-size: 20px;
+}
+.ws #pst_1 {
+  font-family: "rubik";
+  font-weight: 300;
+  font-size: 16px;
+}
+.ws #nonselect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.ws #nc-fs-cont {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+}
+.ws #nc-desc {
+  border: 2px solid rgb(179, 179, 179);
+  padding: 10px;
+}
+.ws #nc-desc p {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=ws.css.map */
