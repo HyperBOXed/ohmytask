@@ -302,18 +302,19 @@
   height: 48px;
   background-size: cover;
   cursor: pointer;
+  transition: 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.ws .ws-container .wsc-block .sidepanel .sp-icon:active {
+  transform: scale(0.9);
 }
 .ws .ws-container .wsc-block .sidepanel #si1 {
-  background-image: url("../../img/OhMyTask_PNGs_ICOs/PNGs/profile.png");
+  background-image: url("../../img/OhMyTask_PNGs_ICOs/PNGs/ico_profile.png");
 }
 .ws .ws-container .wsc-block .sidepanel #si2 {
-  background-image: url("../../img/OhMyTask_PNGs_ICOs/PNGs/menu.png");
+  background-image: url("../../img/OhMyTask_PNGs_ICOs/PNGs/ico_settings.png");
 }
 .ws .ws-container .wsc-block .sidepanel #si3 {
-  background-image: url("../../img/OhMyTask_PNGs_ICOs/PNGs/settings.png");
-}
-.ws .ws-container .wsc-block .sidepanel #si4 {
-  background-image: url("../../img/OhMyTask_PNGs_ICOs/PNGs/logout.png");
+  background-image: url("../../img/OhMyTask_PNGs_ICOs/PNGs/ico_shutdown.png");
 }
 .ws #pst_0 {
   font-family: "okta1";
